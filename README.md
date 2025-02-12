@@ -21,7 +21,7 @@ The following is a sketch of proof.
     - $\sigma_1^2 = \beta_1$
     - $\sigma_2^2 = (1-\beta_2)\beta_1I + \beta_2I = \left[ 1 - (1-\beta_1)(1-\beta_2) \right]I$.
     - $\sigma_3^2 = \left[ 1 - (1-\beta_1)(1-\beta_2) \right] (1-\beta_3)I + \beta_3I = \left[ 1 - (1-\beta_1)(1-\beta_2)(1-\beta_3) \right]I$
-    - Therefore, $\sigma_N^2 = (1 - \bar{\alpha_N}) I$, where $\bar{\alpha_N} = \prod_{s=1}^t (1 - \beta_s)$. Now for very large $N$,  $\lim_{N\to\infty}\sigma_N^2 = 0$
+    - Therefore, $\sigma_N^2 = (1 - \bar{\alpha_N}) I$, where $\bar{\alpha_N} = \prod_{s=1}^t (1 - \beta_s)$. Now for very large $N$,  $\lim_{N\to\infty}\bar{\alpha_N} = 0$, $\lim_{N\to\infty}\sigma_N^2 = 1$
 # Reverse Process
 The idea is to sample a $x_T$ from a zero-mean unit-variance Gassian distribution and use the learnt Neural Network to recover the $x_0$. We want to maximize the likelihood of observing the original input $x_0$, $\textit{i.e.}, \text{max} E\left[ p_\theta(x_0) \right]$. This is equivalent to minimizing the negative log likelihood of $x_0$ under the predicted distribution parameterized by $\theta$, $\textit{i.e.}, \text{min} E\left[- log p_\theta(x_0) \right]$
 
